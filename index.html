@@ -14,6 +14,7 @@
 
         .header {
             position: relative;
+            overflow-x: hidden;
         }
 
         .bike-bg img {
@@ -32,7 +33,7 @@
         }
 
         .bottom-section {
-            height: 700px;
+            height: 1000px;
             background-color: lightgreen;
         }
     </style>
@@ -52,7 +53,7 @@
         function onScrollAnimation() {
             let windowTop = window.scrollY;
             let staticBgTop = bikeBackground.offsetTop;
-            let leftMoveValue = windowTop*3 - staticBgTop - 120;
+            let leftMoveValue = windowTop*2 - staticBgTop - 120;
 
             bike.style.left = leftMoveValue + "px";
         }
