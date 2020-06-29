@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            position: relative;
+        }
+
+        .bike-bg img {
+            display: block;
+            width: 100vw;
+        }
+
+        .bike {
+            position: absolute;
+            bottom: 30px;
+        }
+
+        .bike img {
+            width: 100vw;
+            max-width: 1200px;
+        }
+
+        .bottom-section {
+            height: 700px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="bike-bg"><img src="bike-bg.jpg" alt="Bike background"></div>
+        <div class="bike"><img src="long-bike.png" alt="Long bike ride"></div>
+    </div>
+    <div class="bottom-section"></div>
+
+    <script>
+        const bike = document.getElementsByClassName("bike")[0];
+        const bikeBackground = document.getElementsByClassName("bike-bg")[0];
+
+        function onScrollAnimation() {
+            let windowTop = window.scrollY;
+            let staticBgTop = bikeBackground.offsetTop;
+            let leftMoveValue = windowTop*3 - staticBgTop - 120;
+
+            bike.style.left = leftMoveValue + "px";
+        }
+
+        window.onscroll = onScrollAnimation;
+        window.onload = function() {bike.style.left = "-120px"};
+    </script>
+</body>
+
+</html>
