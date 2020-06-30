@@ -5,62 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .header {
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        .bike-bg img {
-            display: block;
-            width: 100vw;
-        }
-
-        .bike {
-            position: absolute;
-            bottom: 30px;
-        }
-
-        .bike img {
-            width: 100vw;
-            max-width: 1200px;
-        }
-
-        .bottom-section {
-            height: 1000px;
-            background-color: lightgreen;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="header">
+    <header>
+        <div class="logo">
+            <img src="akrom-logo.svg" alt="Akrom logo">
+        </div>
+        <div class="menu">
+            <ul>
+                <li>начало</li>
+                <li>услуги</li>
+                <li>проекти</li>
+                <li>контакти</li>
+            </ul>
+            <span class="envelope-holder">
+                <span class="envelope">
+                    <span class="left-line"></span>
+                    <span class="right-line"></span>
+                </span>
+            </span>
+        </div>
+    </header>
+    <div class="header-anim">
         <div class="bike-bg"><img src="bike-bg.jpg" alt="Bike background"></div>
         <div class="bike"><img src="long-bike.png" alt="Long bike ride"></div>
     </div>
-    <div class="bottom-section"></div>
+    <section class="about">
+        <p class="section-title">ГРАФИЧЕН ДИЗАЙН И ПЕЧАТ</p>
+        <p>
+            АКРОМ е рекламна агенция установена в сърцето на Стара Загора.
+            Малкият ни сплотен екип, посветен изцяло на печатната реклама,
+            повече от 20 години печели доверието на своите клиенти.
+        </p>
+    </section>
+    <section class="services">
+        <p class="section-title">В КАКВО СМЕ ДОБРИ</p>
+        <div class="services-body">
+            <div class="service">
+                <img src="bike.svg">
+                <p class="service-title">ДИЗАЙН</p>
+                <p class="service-details">
+                    Заедно обсъждаме проект, за да създадем възможно най-добрата визия за него.
+                </p>
+            </div>
+            <div class="service">
+                <img src="bike.svg">
+                <p class="service-title">ПЕЧАТ</p>
+                <p class="service-details">
+                    Разпечатка на поръчка и последваща обработка.
+                </p>
+            </div>
+            <div class="service">
+                <img src="bike.svg">
+                <p class="service-title">ГРАВИРАНЕ</p>
+                <p class="service-details">
+                    Гравиране на повърхности и изрязване с лазер.
+                </p>
+            </div>
+            <div class="service">
+                <img src="bike.svg">
+                <p class="service-title">ВЪНШНА РЕКЛАМА</p>
+                <p class="service-details">
+                    Изработка и поставяне на външна реклама.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="selected-proj">
+        <p class="section-title">ИЗБРАНИ ПРОЕКТИ</p>
+        <div class="projects">
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+        </div>
+        <a href="#" class="gallery-btn">ВИЖТЕ ОЩЕ</a>
+    </section>
+    <footer>
+        <div class="contacts">
+            <div>
+                <p>Телефон: 042 603 393</p>
+                <p>Мобилен: 0885 88 33 84</p>
+            </div>
+            <div>
+                <p>E-mail: <br>akrom@akrom-bg.com</p>
+            </div>
+            <div>
+                <p>Адрес: Стара Загора, <br>ул. "Христо Ботев" 111, ет. 1</p>
+            </div>
+        </div>
+        <div class="bottom-line"></div>
+        <div class="copyright">
+            <p>&copyАкром-СтараЗагора 2020</p>
+        </div>
+    </footer>
 
-    <script>
-        const bike = document.getElementsByClassName("bike")[0];
-        const bikeBackground = document.getElementsByClassName("bike-bg")[0];
-
-        function onScrollAnimation() {
-            let windowTop = window.scrollY;
-            let staticBgTop = bikeBackground.offsetTop;
-            let leftMoveValue = windowTop*2 - staticBgTop - 120;
-
-            bike.style.left = leftMoveValue + "px";
-        }
-
-        window.onscroll = onScrollAnimation;
-        window.onload = function() {bike.style.left = "-120px"};
-    </script>
+    <script src="vanilla-js.js"></script>
 </body>
 
 </html>
