@@ -1,5 +1,5 @@
 const bike = document.getElementsByClassName("bike")[0];
-const bikeBackground = document.getElementsByClassName("bike-bg")[0];
+const bikeBackground = document.getElementsByClassName("header-anim")[0];
 
 function onScrollAnimation() {
     let windowTop = window.scrollY;

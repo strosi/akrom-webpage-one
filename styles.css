@@ -101,6 +101,10 @@ span {
 
 .header-anim {
     position: relative;
+    background-image: url(bike-bg-longer.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 70vh;
     overflow-x: hidden;
 }
 
@@ -124,20 +128,22 @@ section {
     text-align: center;
 }
 
-.about {
-    margin-bottom: 50px;
-}
-
 .section-title {
     margin-bottom: 30px;
     font-size: 1.7em;
     font-weight: 800;
+    line-height: 1.2em;
     color: rgb(140, 140, 140);
 }
 
-.about p:last-child {
+.about {
+    margin-bottom: 50px;
+    max-width: 900px;
     margin: 0 auto;
-    width: 900px;
+}
+
+.about p:last-child {
+    margin-bottom: 40px;
 }
 
 .services {
@@ -213,6 +219,21 @@ section {
 .gallery-btn:hover {
     color: chocolate;
     border-color: chocolate;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 600px;
 }
 
 footer {
