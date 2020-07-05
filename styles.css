@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -19,7 +20,7 @@ header {
     height: 60px;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 50;
 }
 
 .logo {
@@ -32,79 +33,96 @@ header {
     width: 150px;
 }
 
+.opened-menu {
+    position: fixed;
+    right: -150vh;
+    top: -25vh;
+    z-index: 100;
+    transition: all .2s ease-in-out;
+}
+
+.menu-hint {
+    right: -140vh;
+}
+
+.show-menu {
+    right: -100vh;
+}
+
+.menu-base {
+    width: 150vh;
+    height: 150vh;
+    background-color: rgb(247, 195, 94);
+    border-radius: 50%;
+}
+
 .menu {
     position: absolute;
-    top: 27px;
-    right: 50px;
+    top: calc(106vh / 2);
+    left: calc(40vh / 2);
+    text-align: center;
 }
 
 .menu ul {
-    display: inline-block;
+    list-style-type: none;
 }
 
 .menu ul li {
-    display: inline;
-    padding: 5px;
     text-transform: uppercase;
-    font-size: .9em;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 1.2em;
     cursor: pointer;
+    color: rgb(70, 70, 70);
 }
 
-span {
-    display: inline-block;
+.facebook {
+    font-size: 1.2em;
+    font-weight: 800;
+    margin-top: 30%;
 }
 
-.envelope-holder {
-    position: relative;
-    top: -6px;
-    margin: 0 7px;
-    width: 36px;
-    height: 36px;
-    border: 1px solid black;
-    border-radius: 50%;
+.facebook a {
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+}
+
+.envelope-icon {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.envelope-icon svg {
+    fill: rgb(70, 70, 70);
+}
+
+.envelope-icon:hover {
+    animation: shake 0.2s;
+}
+
+@keyframes shake {
+    0% {transform: rotate(-5deg);}
+    20% {transform: rotate(-10deg);}
+    40% {transform: rotate(-5deg);}
+    50% {transform: rotate(0deg);}
+    60% {transform: rotate(5deg);}
+    80% {transform: rotate(10deg);}
+    100% {transform: rotate(5deg);}
+}
+
+.send-inquiry-link {
+    font-size: 1.2em;
+    font-weight: 800;
+    color: rgb(70, 70, 70);
     cursor: pointer;
-}
-
-.envelope-holder:hover {
-    border-color: chocolate;
-}
-
-.envelope {
-    position: relative;
-    top: 8px;
-    left: 7px;
-    width: 20px;
-    height: 15px;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-
-.left-line {
-    position: absolute;
-    top: 4px;
-    left: -2px;
-    width: 14px;
-    height: 1px;
-    background-color: black;
-    transform: rotateZ(45deg)
-}
-
-.right-line {
-    position: absolute;
-    top: 4px;
-    left: 8px;
-    width: 14px;
-    height: 1px;
-    background-color: black;
-    transform: rotateZ(-45deg)
 }
 
 .header-anim {
     position: relative;
     background-image: url(bike-bg-longer.jpg);
     background-size: cover;
-    width: 100vw;
-    height: 70vh;
+    width: 100%;
+    height: 75vh;
     overflow-x: hidden;
 }
 
@@ -133,22 +151,16 @@ section {
 }
 
 .about {
-    margin-bottom: 50px;
     max-width: 900px;
-    margin: 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.about p:last-child {
-    margin-bottom: 40px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
 .services {
     padding-right: 40px;
     padding-left: 40px;
     background-color: rgb(245, 245, 245);
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .services-body {
@@ -271,8 +283,5 @@ footer {
 @media only screen and (max-width: 600px) {
     .header-anim {
         height: 60vh;
-    }
-    .about {
-        height: 40vh;
     }
 }

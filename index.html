@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Akrom</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header-buttons.css">
 </head>
 
 <body>
@@ -13,21 +14,58 @@
         <div class="logo">
             <img src="akrom-logo.svg" alt="Akrom logo">
         </div>
-        <div class="menu">
-            <ul>
-                <li>начало</li>
-                <li>услуги</li>
-                <li>проекти</li>
-                <li>контакти</li>
-            </ul>
-            <span class="envelope-holder">
-                <span class="envelope">
-                    <span class="left-line"></span>
-                    <span class="right-line"></span>
-                </span>
-            </span>
+        <div class="header-buttons">
+            <div class="menu-btn">
+                <span class="menu-top-bar"></span>
+                <p class="menu-text">МЕНЮ</p>
+                <span class="menu-bottom-bar"></span>
+            </div>
+            <!-- <div class="close-btn">
+                <span class="close-bar1"></span>
+                <span class="close-bar2"></span>
+            </div> -->
+            <div class="envelope-btn">
+                <span class="env-left-line"></span>
+                <span class="env-right-line"></span>
+                <span class="env-left-line-bottom"></span>
+                <span class="env-left-right-bottom"></span>
+            </div>
         </div>
     </header>
+    <div class="opened-menu">
+        <div class="menu-base">
+            <div class="close-btn">
+                <span class="close-bar1"></span>
+                <span class="close-bar2"></span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>начало</li>
+                    <li>услуги</li>
+                    <li>проекти</li>
+                    <li>контакти</li>
+                </ul>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/AKROMDESIGN/" target="_blank">Facebook</a>
+                </div>
+                <div class="envelope-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+                        width="43px" height="32px" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 3.19 2.34">
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer" />
+                            <path class="fil0"
+                                d="M0.28 2.21l2.62 0c0.03,0 0.05,0 0.07,-0.01l-0.95 -0.95 -0.23 0.23c-0.11,0.11 -0.29,0.11 -0.4,0l-0.22 -0.23 -0.95 0.95c0.02,0.01 0.04,0.01 0.06,0.01zm1.83 -1.05l0.94 0.94c0.01,-0.01 0.01,-0.03 0.01,-0.05l0 -1.77c0,-0.02 0,-0.04 -0.01,-0.06l-0.94 0.94zm0.85 -1.02c-0.02,-0.01 -0.04,-0.01 -0.06,-0.01l-2.62 0c-0.01,0 -0.03,0 -0.05,0.01l1.25 1.25c0.06,0.06 0.16,0.06 0.22,0l1.26 -1.25zm-2.82 0.09c-0.01,0.01 -0.01,0.03 -0.01,0.05l0 1.77c0,0.02 0,0.04 0.01,0.05l0.94 -0.94 -0.94 -0.93zm2.76 2.11l-2.62 0c-0.15,0 -0.28,-0.13 -0.28,-0.29l0 -1.77c0,-0.15 0.13,-0.28 0.28,-0.28l2.62 0c0.16,0 0.29,0.13 0.29,0.28l0 1.77c0,0.16 -0.13,0.29 -0.29,0.29z" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="send-inquiry-link">
+                    <p>Изпрати <br>ЗАПИТВАНЕ</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="header-anim">
         <div class="bike"><img src="long-bike.png" alt="Long bike ride"></div>
     </div>
@@ -114,6 +152,7 @@
     </footer>
 
     <script src="vanilla-js.js"></script>
+    <script src="header-buttons.js"></script>
 </body>
 
 </html>
