@@ -119,11 +119,85 @@ header {
 
 .header-anim {
     position: relative;
-    background-image: url(bike-bg-longer.jpg);
-    background-size: cover;
     width: 100%;
     height: 75vh;
     overflow-x: hidden;
+}
+
+.landscape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5%;
+    width: 100%;
+    background: #015871;
+}
+
+.back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background: url("back.svg") no-repeat;
+    background-size: 100%;
+}
+
+.buildings {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 6652px;
+    height: 445px;
+    background: url("buildings.svg");
+    animation: buildings 60s linear infinite;
+}
+
+.middleview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 7228px;
+    height: 461px;
+    background: url("middle.svg");
+    animation: middleview 30s linear infinite;
+}
+
+.front {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 6652px;
+    height: 552px;
+    background: url("front.svg");
+    animation: front 10s linear infinite;
+}
+
+@keyframes middleview {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1807px;
+    }
+}
+
+@keyframes front {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1663px;
+    }
+}
+
+@keyframes buildings {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1663px;
+    }
 }
 
 .bike {
@@ -132,9 +206,9 @@ header {
 }
 
 .bike img {
-    width: 100vw;
-    max-width: 1100px;
-    min-width: 500px;
+    width: 60vw;
+    max-width: 800px;
+    min-width: 650px;
 }
 
 section {
