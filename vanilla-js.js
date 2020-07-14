@@ -6,8 +6,10 @@ function onScrollAnimation() {
     let staticBgTop = bikeBackground.offsetTop;
     let leftMoveValue = windowTop * 3 - staticBgTop - 120;
 
-    bike.style.left = leftMoveValue + "px";
+    bike.style.transform = "translate(" + leftMoveValue + "px)";
 }
 
 window.onscroll = onScrollAnimation;
-window.onload = function () { bike.style.left = "-120px" };
+window.onload = function () { 
+    bike.style.transform = "translate(-120px)";
+};

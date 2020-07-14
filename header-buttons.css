@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+
 .header-buttons {
     position: absolute;
     top: 26px;
@@ -21,7 +23,7 @@
     width: 32px;
     height: 2px;
     background-color: rgb(100, 100, 100);
-    transition: all .4s ease-in-out;
+    transition: transform .4s ease-in-out;
 }
 
 .menu-top-bar {
@@ -36,9 +38,9 @@
 
 .menu-text {
     position: absolute;
-    font-family: sans-serif;
+    font-family: 'Nunito', Arial, sans-serif;
     font-size: 0.85em;
-    font-weight: 600;
+    font-weight: 800;
     margin: 2px auto;
     transition: all .2s;
 }
@@ -56,46 +58,9 @@
     transform: translate(0, -13px);
 }
 
-.close-btn {
-    position: absolute;
-    visibility: hidden;
-    /* top: 265px;
-    left: 410px; */
-    top: 29vh;
-    left: 42vh;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    z-index: 150;
-}
-
-.close-bar1 {
-    top: 11px;
-    left: -5px;
-}
-
-.close-bar2 {
-    top: 11px;
-    left: -5px;
-}
-
-.active-close {
-    visibility: visible;
-}
-
-.active-close .close-bar1 {
-    opacity: 1;
-    transform: rotate(45deg);
-}
-
-.active-close .close-bar2 {
-    opacity: 1;
-    transform: rotate(-45deg);
-}
-
 .envelope-btn {
     position: absolute;
-    display: block;
+    /* display: block; */
     left: 70px;
     width: 38px;
     height: 28px;
@@ -103,7 +68,7 @@
     border-radius: 4px;
     box-sizing: border-box;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    /* transition: right .3s ease-in-out; */
 }
 
 .env-left-line,
@@ -151,7 +116,7 @@
     left: 19px;
 }
 
-.hover-envelope-btn {
+.shake-envelope {
     animation: shake 0.2s;
 }
 
@@ -165,8 +130,39 @@
     100% {transform: rotate(5deg);}
 }
 
-.collapse {
-    transform: scaleY(.1);
+.close-btn {
+    position: absolute;
+    visibility: hidden;
+    top: 29vh;
+    left: 42vh;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 150;
+}
+
+.close-bar1 {
+    top: 11px;
+    left: -5px;
+}
+
+.close-bar2 {
+    top: 11px;
+    left: -5px;
+}
+
+.active-close {
+    visibility: visible;
+}
+
+.active-close .close-bar1 {
+    opacity: 1;
+    transform: rotate(45deg);
+}
+
+.active-close .close-bar2 {
+    opacity: 1;
+    transform: rotate(-45deg);
 }
 
 .hide {

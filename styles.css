@@ -38,11 +38,11 @@ header {
     right: -150vh;
     top: -25vh;
     z-index: 100;
-    transition: all .2s ease-in-out;
+    transition: right .2s ease-in-out;
 }
 
 .menu-hint {
-    right: -140vh;
+    right: -145vh;
 }
 
 .show-menu {
@@ -121,6 +121,7 @@ header {
     position: relative;
     width: 100%;
     height: 75vh;
+    min-height: 600px;
     overflow-x: hidden;
 }
 
@@ -130,7 +131,7 @@ header {
     left: 0;
     height: 5%;
     width: 100%;
-    background: #015871;
+    /* background: #015871; */
 }
 
 .back {
@@ -175,28 +176,28 @@ header {
 
 @keyframes middleview {
     0% {
-        margin-left: 0;
+        transform: translateX(0);
     }
     100% {
-        margin-left: -1807px;
+        transform: translateX(-1807px);
     }
 }
 
 @keyframes front {
     0% {
-        margin-left: 0;
+        transform: translateX(0);
     }
     100% {
-        margin-left: -1663px;
+        transform: translateX(-1663px);
     }
 }
 
 @keyframes buildings {
     0% {
-        margin-left: 0;
+        transform: translateX(0);
     }
     100% {
-        margin-left: -1663px;
+        transform: translateX(-1663px);
     }
 }
 
